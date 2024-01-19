@@ -26,7 +26,6 @@ def main():
         st.session_state.messages = [
             SystemMessage(content="You are a helpful assistant.")
         ]
-
     st.header("Green Optimizer 🤖")
 
     with st.sidebar:
@@ -93,7 +92,7 @@ if __name__ == '__main__':
 
 
 
-'''import os
+'''import os#
 import streamlit as st
 from displayer import bot_template, user_template
 from dotenv import load_dotenv
