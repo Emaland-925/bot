@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from displayer import bot_template, user_template
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 from ML.Ml import CityWeatherData
@@ -28,7 +28,7 @@ llm_cache = globals.get_llm_cache()
 
 
 def init():
-    load_dotenv()
+    #load_dotenv()
 
     # Loading OpenAI API key
     if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
