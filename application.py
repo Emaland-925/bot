@@ -33,7 +33,7 @@ def init():
     # Loading OpenAI API key
     if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
         print("OPENAI_API_KEY is not set yet")
-        exit(1)
+        st.error('ERROR: API KEY IS NOT SET')
     else:
         print("OPENAI_API_KEY is set")
     
