@@ -74,11 +74,11 @@ def main():
                         # Display the form for user input
                         st.write(f"Welcome! Please enter the following information for {user_city.capitalize()}:")
                         with st.form(key='weather_form'):
-                            ALLSKY = st.number_input("Enter ALLSKY:")
-                            CLRSKY = st.number_input("Enter CLRSKY:")
-                            pressure = st.number_input("Enter pressure:")
-                            temperature = st.number_input("Enter temperature:")
-                            moisture = st.number_input("Enter relative humidity:")
+                            ALLSKY = st.number_input("Enter All Sky Short Wave:")
+                            CLRSKY = st.number_input("Enter Clear Sky Short Wave:")
+                            pressure = st.number_input("Enter Pressure:")
+                            temperature = st.number_input("Enter Temperature:")
+                            moisture = st.number_input("Enter Relative Humidity:")
 
                             submit_button = st.form_submit_button(label='Submit')
 
