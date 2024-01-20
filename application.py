@@ -5,6 +5,26 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 from ML.Ml import CityWeatherData
+from langchain import globals
+
+# Set verbose
+globals.set_verbose(True)
+
+# Get verbose
+verbose = globals.get_verbose()
+
+# Set debug
+globals.set_debug(True)
+
+# Get debug
+debug = globals.get_debug()
+
+# Set llm_cache
+globals.set_llm_cache(True)
+
+# Get llm_cache
+llm_cache = globals.get_llm_cache()
+
 
 
 def init():
@@ -83,8 +103,7 @@ def main():
                 else:
                     st.markdown(bot_template.replace("{{MSG}}", "We do not have enough information about this city yet."), unsafe_allow_html=True)
                     
-            
-
+     
     # Displaying all the messages the user had by fetching them
     messages = st.session_state.get("messages", [])
 
