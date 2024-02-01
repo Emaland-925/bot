@@ -7,14 +7,14 @@
 import pandas as pd
 
 # Read the CSV file into a DataFrame
-file_path = 'DAmmam 2020-2022.csv'
+file_path = 'ML\DAmmam 2020-2022.csv'
 data = pd.read_csv(file_path)
 
 # Display the first few rows of the DataFrame to inspect the data
-display(data.head())
+print(data.head())
 
 # Display information about the DataFrame, including data types
-display(data.info())
+print(data.info())
 
 
 # In[3]:
@@ -24,11 +24,11 @@ display(data.info())
 categorical_columns = data.select_dtypes(include=['object']).columns
 for column in categorical_columns:
     print(f"Column: {column}")
-    display(data[column].value_counts())
+    print(data[column].value_counts())
     print("\n")
 # Check for missing data
 missing_data = data.isnull().sum()
-display(missing_data[missing_data > 0])
+print(missing_data[missing_data > 0])
 # Identify outliers using IQR method for numerical columns
 import numpy as np
 
@@ -40,7 +40,7 @@ for column in numerical_columns:
     lower_bound = q1 - 1.5 * iqr
     upper_bound = q3 + 1.5 * iqr
     outliers = data[(data[column] < lower_bound) | (data[column] > upper_bound)]
-    display(f"Column: {column}, Number of outliers: {len(outliers)}")
+    print(f"Column: {column}, Number of outliers: {len(outliers)}")
 
 
 # In[4]:
@@ -248,7 +248,7 @@ sorted_corr = sorted_corr['Solar Energy'].index
 
 print('The top correlated input variables are: ',sorted_corr[1:].tolist())
 
-display(data)
+print(data)
 
 
 # In[12]:
